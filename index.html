@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta charset="utf-8">
+    <meta content="webkit" name="renderer">
+    <meta content="webkit" name="force-rendering">
+    <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="True" name="HandheldFriendly">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#f4f4f4">
+    <title>同步∞播放器</title>
+    <link href="src/main.css" rel="stylesheet">
+    <script src="src/main.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="cover">
+            <div class="cover__logo">
+                <h1><b>同步∞播放器</b></h1>
+            </div>
+            <div class="cover__intro">
+                <p>A simple Youtube sync player.</p>
+            </div>
+        </div>
+        <main class="main">
+            <div class="post-list">
+                <div class="post-entry content-card">
+                     <label for="youtube-urls">輸入 YouTube 網址 (每行一個)：</label>
+        <textarea id="youtube-urls" placeholder="
+https://www.youtube.com/watch?v=first_video
+https://www.youtube.com/watch?v=second_video">https://music.youtube.com/watch?v=lTuhddyrp-I
+https://music.youtube.com/watch?v=HvH_7lYFW7g
+https://music.youtube.com/watch?v=6Iz0b5u7mag</textarea>
+
+        <div id="add-controls">
+            <button onclick="embedVideos()">加入撥放器</button>
+            <button onclick="clearVideos()" style="background-color: #6c757d;">清空撥放器</button>
+            <button onclick="playAllVideos()" style="background-color: #28a745;">同步播放</button>
+            <button class="pause-all" onclick="pauseAllVideos()" style="background-color: #dc3545;">同步暫停</button>
+        </div>
+
+        <div id="video-players"></div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <p class="footer-copyright"><a href="https://canaria.cc/">canaria</a> © 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
